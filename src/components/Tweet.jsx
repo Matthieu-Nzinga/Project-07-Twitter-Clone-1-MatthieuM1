@@ -5,7 +5,7 @@ import { dataTweets } from "./Database";
 function Tweet() {
   
   return (
-    <div className="tweet">
+    <div className="tweets">
       <TweetDetail tweet={dataTweets} />
     </div>
   );
