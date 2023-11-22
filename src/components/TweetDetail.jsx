@@ -19,7 +19,9 @@ function TweetDetail({ tweet }) {
                 </h2>
               ))}
               <p className="tweet-text">{element.description} </p>
-              <img className="tweet-image" src={element.photo} alt="" />
+              <div className="tweet-image">
+                <img  src={element.photo} alt="" />
+              </div>
             </div>
             <div className="tweet-actions">
                 {element.dataLikes.map((like) => (

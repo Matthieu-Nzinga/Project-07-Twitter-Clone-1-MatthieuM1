@@ -12,6 +12,7 @@ import iconLikes3 from "../images/GroupL3.svg";
 import iconLikes4 from "../images/GroupL4.svg";
 import imageT from "../images/tweet-image.png";
 import imageT1 from "../images/image 1.png";
+import imageTweeters from "../images/image tweeter.png";
 
 
 
@@ -27,3 +28,4 @@ export const iconLike3 = iconLikes3;
 export const iconLike4 = iconLikes4;
 export const imageTs = imageT; 
 export const imageTs1 = imageT1; 
+export const imageTweeter = imageTweeters; 
