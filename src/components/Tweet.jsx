@@ -1,12 +1,12 @@
 import React from "react";
 import TweetDetail from "./TweetDetail";
-import { dataTweets } from "./Database";
+import { tweets } from "../models/Database";
 
 function Tweet() {
   
   return (
     <div className="tweets">
-      <TweetDetail tweet={dataTweets} />
+      <TweetDetail tweet={tweets} />
     </div>
   );
 }
