@@ -1,6 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
 function TweetDetail({ tweet }) {
+
+  const [counter, setCounter] = useState(60);
+  const [counters, setCounters] = useState(false);
+  
+  
+  const hadleClick = () => {
+    if (counters) {
+      setCounter(counter + 1);
+      setCounters(false)
+    }else{
+      setCounter(counter - 1);
+      setCounters(true)
+    }
+  }
+
   return (
     <div className="tweets">
       {tweet.map((element, index) => (
@@ -31,8 +46,10 @@ function TweetDetail({ tweet }) {
             <div className="tweet-actions">
               {element.tweetIcons.map((like, indexId) => (
                 <div key={indexId} className="tweet-action">
-                  <img src={like.iconLike} alt="" />
-                  <span>{like.count} </span>
+                  
+                    <img src={like.iconLike} alt="" />
+                    <span>{like.count} </span>
+                  
                 </div>
               ))}
             </div>
