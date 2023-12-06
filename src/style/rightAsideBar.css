@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.right-sidebar {
+    padding: 2.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.search{
+    display: flex;
+    gap: 20px;
+    height: 35px;
+    width: 250px;
+    background-color: rgb(76, 76, 78);
+    align-items: center;
+    padding: 10px;
+    border-radius: 50px;
+    overflow: hidden;
+    font-size: 20px;
+    
+}
+.search input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    resize: none;
+}
+
+.card-one{
+    display: flex;
+    gap: 20px;
+    width: 250px;
+    background-color: rgb(76, 76, 78);
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 20px;
+    flex-direction: column;
+}
+
+.setting{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: bold;
+}
+
+.detail{
+    width: 100%;
+}
+.detail span{
+    color: #6E767D;
+    font-size: 14px;
+}
+.detail div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
