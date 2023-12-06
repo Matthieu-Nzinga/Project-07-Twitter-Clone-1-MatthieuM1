@@ -126,3 +126,34 @@ export const tweets = [
       ],
     },
   ];
+
+export const squid = [
+    {
+      id: 1,
+      description: "Trending in Turkye",
+      pseudo: "#SQUID",
+      count: "2,066 Tweets",
+      point: "...",
+    },
+    {
+      id: 2,
+      description: "Trending in Turkye",
+      pseudo: "#SQUID",
+      count: "2,066 Tweets",
+      point: "...",
+    },
+    {
+        id: 3,
+        description: "Trending in Turkye",
+        pseudo: "#SQUID",
+        count: "2,066 Tweets",
+        point: "...",
+      },
+      {
+        id: 4,
+        description: "Trending in Turkye",
+        pseudo: "#SQUID",
+        count: "2,066 Tweets",
+        point: "...",
+      }
+  ];

@@ -1,24 +1,10 @@
 import React from "react";
 import "../style/rightAsideBar.css";
 import { CiSettings } from "react-icons/ci";
+import { squid } from "../models/Database";
 
 function CardOne() {
-  const squid = [
-    {
-      id: 1,
-      description: "Trending in Turkye",
-      pseudo: "#SQUID",
-      count: "2,066 Tweets",
-      point: "...",
-    },
-    {
-      id: 2,
-      description: "Trending in Turkye",
-      pseudo: "#SQUID",
-      count: "2,066 Tweets",
-      point: "...",
-    },
-  ];
+  
   return (
     <div className="card-one">
       <div className="setting">

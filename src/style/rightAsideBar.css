@@ -58,6 +58,7 @@
 
 .detail{
     width: 100%;
+    font-weight: bold;
 }
 .detail span{
     color: #6E767D;
