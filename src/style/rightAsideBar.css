@@ -18,7 +18,7 @@
     display: flex;
     gap: 20px;
     height: 35px;
-    width: 250px;
+    width: 300px;
     background-color: rgb(76, 76, 78);
     align-items: center;
     padding: 10px;
@@ -38,9 +38,8 @@
 .card-one{
     display: flex;
     gap: 20px;
-    width: 250px;
+    width: 300px;
     background-color: rgb(76, 76, 78);
-    align-items: center;
     padding: 10px;
     border-radius: 10px;
     overflow: hidden;
@@ -68,4 +67,40 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.show-more{
+    color:  #1D9BF0;
+    font-weight: bold;
+}
+
+.card-two{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-two h2{
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.card-two span{
+    font-size: 11px;
+    color: #6E767D;
+}
+
+.card-two-img{
+    width: 30px;
+    height: 30px;
+}
+
+.card-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body{
+    display: flex;
+    gap: 10px;
 }

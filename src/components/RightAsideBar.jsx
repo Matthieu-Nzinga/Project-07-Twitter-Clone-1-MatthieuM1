@@ -2,6 +2,7 @@ import React from "react";
 import "../style/rightAsideBar.css";
 import { CiSearch } from "react-icons/ci";
 import CardOne from "./CardOne";
+import CardTwo from "./CardTwo";
 
 function RightAsideBar() {
   return (
@@ -11,6 +12,7 @@ function RightAsideBar() {
         <input  type="text" placeholder="Search Tweet"/>
       </div>
       <CardOne/>
+      <CardTwo/>
     </div>
   );
 }

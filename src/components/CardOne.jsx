@@ -22,6 +22,7 @@ function CardOne() {
           <span>{element.count}</span>
         </div>
       ))}
+      <p className="show-more">Show more</p>
     </div>
   );
 }
