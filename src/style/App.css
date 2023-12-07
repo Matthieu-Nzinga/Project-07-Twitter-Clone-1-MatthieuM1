@@ -11,7 +11,8 @@ body{
 #root{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 50px;
 }
 
 .timeline {
@@ -181,7 +182,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
+    gap: 4rem;
     color: grey;
     font-size: 1rem;
 }
@@ -196,5 +197,19 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 5px;
+    width: max-content;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 3px;
 }
+
+.tweet-action:nth-child(1):hover {
+    background-color: blue;
+}
+.tweet-action:nth-child(2):hover {
+    background-color: green;
+}
+.tweet-action:nth-child(3):hover {
+    background-color: red;
+} 

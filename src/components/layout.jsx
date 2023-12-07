@@ -1,13 +1,16 @@
-import React from 'react';
+import React from "react";
+import LeftAsideBar from "./LeftAsideBar";
+import RightAsideBar from "./RightAsideBar";
+import { Outlet } from "react-router-dom";
 
-function Layout({children}) {
-    return (
-        <>
-            <div className="left-sidebar"/>
-            {children}
-            <div className="right-sidebar" />
-        </>
-    );
+function Layout({ children }) {
+  return (
+    <>
+      <LeftAsideBar />
+      <Outlet />
+      <RightAsideBar />
+    </>
+  );
 }
 
 export default Layout;

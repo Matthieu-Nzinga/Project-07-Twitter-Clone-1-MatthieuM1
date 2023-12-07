@@ -13,7 +13,8 @@ import { CiCircleMore } from "react-icons/ci";
 
 function LeftAsideBar() {
   return (
-    <div className="left-sidebar">
+    <div className="sidebar">
+      <div>
       <FaTwitter />
       <LinkMenu icon={<RiHome7Fill />} title={"Home"} />
       <LinkMenu icon={<SiSharp />} title={"Explore"} />
@@ -24,6 +25,7 @@ function LeftAsideBar() {
       <LinkMenu icon={<HiOutlineUser />} title={"Profile"} />
       <LinkMenu icon={<CiCircleMore />} title={"More"} />
       <button>Tweet</button>
+      </div>
     </div>
   );
 }

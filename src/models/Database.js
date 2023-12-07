@@ -12,6 +12,7 @@ import {
 
 export const tweets = [
   {
+    id:"1",
     avatar: imageTweets,
     tweetImage: null,
     dataTitles: {
@@ -23,25 +24,20 @@ export const tweets = [
 
     description:
       "President Joe Biden touted a new agreement reached with the European Union to ease Trump-era tariffs on aluminum and steel as a major breakthrough that would serve to both strengthen the US steel industry and combat the global climate crisis.",
-    tweetIcons: [
-      {
-        iconLike: iconLike1,
-        count: 57,
-      },
-      {
-        iconLike: iconLike2,
-        count: 144,
-      },
-      {
-        iconLike: iconLike3,
-        count: 184,
-      },
-      {
-        iconLike: iconLike4,
-      },
-    ],
+
+    iconCommentaire: iconLike1,
+    countCommentaire: 57,
+
+    iconRetweet: iconLike2,
+    countRetweet: 144,
+
+    iconLike: iconLike3,
+    countLike: 184,
+
+    iconPartage: iconLike4,
   },
   {
+    id:"2",
     avatar: imageTs1,
     tweetImage: imageTs,
     dataTitles: {
@@ -53,25 +49,19 @@ export const tweets = [
 
     description:
       "Gardening boomed during the pandemic. Six Black writers share how it has helped them re-establish, and reimagine, a connection to cultivation and the land.",
-    tweetIcons: [
-      {
-        iconLike: iconLike1,
-        count: 19,
-      },
-      {
-        iconLike: iconLike2,
-        count: 48,
-      },
-      {
-        iconLike: iconLike3,
-        count: 442,
-      },
-      {
-        iconLike: iconLike4,
-      },
-    ],
+      iconCommentaire: iconLike1,
+      countCommentaire: 19,
+  
+      iconRetweet: iconLike2,
+      countRetweet: 48,
+  
+      iconLike: iconLike3,
+      countLike: 482,
+  
+      iconPartage: iconLike4,
   },
   {
+    id:"3",
     avatar: imageTweeter,
     tweetImage: null,
     dataTitles: {
@@ -82,25 +72,19 @@ export const tweets = [
     },
 
     description: "BIG NEWS lol jk still Twitter",
-    tweetIcons: [
-      {
-        iconLike: iconLike1,
-        count: 6.8 + "K",
-      },
-      {
-        iconLike: iconLike2,
-        count: 38.6 + "K",
-      },
-      {
-        iconLike: iconLike3,
-        count: 267.1 + "K",
-      },
-      {
-        iconLike: iconLike4,
-      },
-    ],
+    iconCommentaire: iconLike1,
+    countCommentaire: 68,
+
+    iconRetweet: iconLike2,
+    countRetweet: 366,
+
+    iconLike: iconLike3,
+    countLike: 267,
+
+    iconPartage: iconLike4,
   },
   {
+    id:"4",
     avatar: imageTweeter,
     tweetImage: null,
     dataTitles: {
@@ -111,23 +95,16 @@ export const tweets = [
     },
 
     description: "hello literally everyone",
-    tweetIcons: [
-      {
-        iconLike: iconLike1,
-        count: 118.7 + "K",
-      },
-      {
-        iconLike: iconLike2,
-        count: 785.4 + "K",
-      },
-      {
-        iconLike: iconLike3,
-        count: 3.3 + "M",
-      },
-      {
-        iconLike: iconLike4,
-      },
-    ],
+    iconCommentaire: iconLike1,
+    countCommentaire: 51,
+
+    iconRetweet: iconLike2,
+    countRetweet: 10,
+
+    iconLike: iconLike3,
+    countLike: 10,
+
+    iconPartage: iconLike4,
   },
 ];
 
@@ -176,13 +153,12 @@ export const follows = [
     userName: "CNN",
     iconCertification: iconCertifier,
     lienProfil: "@CNN",
-  }
-  ,
+  },
   {
     id: 3,
     avatar: imageTweeter,
     userName: "Twitter",
     iconCertification: iconCertifier,
     lienProfil: "@Twitter",
-  }
+  },
 ];

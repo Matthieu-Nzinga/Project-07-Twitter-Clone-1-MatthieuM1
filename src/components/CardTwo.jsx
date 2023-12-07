@@ -17,7 +17,7 @@ function CardTwo() {
               <span>{element.lienProfil} </span>
             </div>
           </div>
-          <button>Follow</button>
+          <button className="follow">Follow</button>
         </div>
       ))}
       <p className="show-more">Show more</p>
