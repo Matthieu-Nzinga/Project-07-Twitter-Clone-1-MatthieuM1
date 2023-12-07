@@ -3,6 +3,7 @@ import "../style/rightAsideBar.css";
 import { CiSearch } from "react-icons/ci";
 import CardOne from "./CardOne";
 import CardTwo from "./CardTwo";
+import Footer from "./Footer";
 
 function RightAsideBar() {
   return (
@@ -13,6 +14,7 @@ function RightAsideBar() {
       </div>
       <CardOne/>
       <CardTwo/>
+      <Footer/>
     </div>
   );
 }
