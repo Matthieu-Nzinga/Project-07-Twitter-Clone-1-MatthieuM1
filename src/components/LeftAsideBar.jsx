@@ -10,11 +10,12 @@ import { CiBookmark } from "react-icons/ci";
 import { RiFileList2Line } from "react-icons/ri";
 import { HiOutlineUser } from "react-icons/hi";
 import { CiCircleMore } from "react-icons/ci";
+import Profile from "./Profile";
 
 function LeftAsideBar() {
   return (
     <div className="sidebar">
-      <div>
+      <div className="sidebar-div">
       <FaTwitter />
       <LinkMenu icon={<RiHome7Fill />} title={"Home"} />
       <LinkMenu icon={<SiSharp />} title={"Explore"} />
@@ -26,6 +27,7 @@ function LeftAsideBar() {
       <LinkMenu icon={<CiCircleMore />} title={"More"} />
       <button>Tweet</button>
       </div>
+      <Profile/>
     </div>
   );
 }

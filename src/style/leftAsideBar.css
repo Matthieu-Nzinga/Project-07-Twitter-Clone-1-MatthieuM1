@@ -12,14 +12,36 @@
     position: relative;
     height: 100vh;
     width: 250px;
+    
 }
 
-.sidebar > div {
+.sidebar-div {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
     position: fixed;
 }
+.profil {
+    display: flex;
+    gap: 20px;
+    position: fixed;
+    bottom: 10px;
+    align-items: center;
+}
+.profil span {
+    color: gray;
+}
+.profil img {
+    width: 70px;
+    height: 70px;
+}
+
+.profil-div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 
 .link-menu{
     display: flex;
