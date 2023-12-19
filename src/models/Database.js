@@ -12,7 +12,8 @@ import {
 
 export const tweets = [
   {
-    id:"1",
+    userId : 1,
+    id: 1,
     avatar: imageTweets,
     tweetImage: null,
     dataTitles: {
@@ -37,7 +38,8 @@ export const tweets = [
     iconPartage: iconLike4,
   },
   {
-    id:"2",
+    userId : 2,
+    id: 2,
     avatar: imageTs1,
     tweetImage: imageTs,
     dataTitles: {
@@ -49,19 +51,20 @@ export const tweets = [
 
     description:
       "Gardening boomed during the pandemic. Six Black writers share how it has helped them re-establish, and reimagine, a connection to cultivation and the land.",
-      iconCommentaire: iconLike1,
-      countCommentaire: 19,
-  
-      iconRetweet: iconLike2,
-      countRetweet: 48,
-  
-      iconLike: iconLike3,
-      countLike: 482,
-  
-      iconPartage: iconLike4,
+    iconCommentaire: iconLike1,
+    countCommentaire: 19,
+
+    iconRetweet: iconLike2,
+    countRetweet: 48,
+
+    iconLike: iconLike3,
+    countLike: 482,
+
+    iconPartage: iconLike4,
   },
   {
-    id:"3",
+    userId : 3,
+    id: 3,
     avatar: imageTweeter,
     tweetImage: null,
     dataTitles: {
@@ -84,7 +87,8 @@ export const tweets = [
     iconPartage: iconLike4,
   },
   {
-    id:"4",
+    userId : 3,
+    id: 4,
     avatar: imageTweeter,
     tweetImage: null,
     dataTitles: {

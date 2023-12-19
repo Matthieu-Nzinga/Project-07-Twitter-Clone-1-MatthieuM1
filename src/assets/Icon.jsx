@@ -4,7 +4,7 @@ import icon2 from "../images/Group2.svg";
 import icon3 from "../images/Group3.svg";
 import icon4 from "../images/Group4.svg";
 import icons from "../images/iconsn.svg";
-import imageTweet from "../images/tweet-profile-photo.png";
+import imageTweet from "../images/image.png";
 import imageCertifier from "../images/certifier.png";
 import iconLikes1 from "../images/GroupL1.svg";
 import iconLikes2 from "../images/GroupL2.svg";
@@ -13,9 +13,9 @@ import iconLikes4 from "../images/GroupL4.svg";
 import imageT from "../images/tweet-image.png";
 import imageT1 from "../images/image 1.png";
 import imageTweeters from "../images/image tweeter.png";
-
-
-
+import imageBanners from "../images/vecteezy_natural-background-landscape-photo-jogkradin-in-the-deep_14940680.jpg";
+import imageBanners1 from "../images/arrière-plan.jpg";
+import imageBanners2 from "../images/images.jpg";
 
 export const dataIcons = [icon, icon1, icon2, icon3, icon4];
 
@@ -26,6 +26,9 @@ export const iconLike1 = iconLikes1;
 export const iconLike2 = iconLikes2;
 export const iconLike3 = iconLikes3;
 export const iconLike4 = iconLikes4;
-export const imageTs = imageT; 
-export const imageTs1 = imageT1; 
-export const imageTweeter = imageTweeters; 
+export const imageTs = imageT;
+export const imageTs1 = imageT1;
+export const imageTweeter = imageTweeters;
+export const imageBanner = imageBanners;
+export const imageBanner1 = imageBanners1;
+export const imageBanner2 = imageBanners2;

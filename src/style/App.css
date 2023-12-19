@@ -197,19 +197,45 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
     width: max-content;
     background-color: transparent;
     cursor: pointer;
-    padding: 3px;
 }
 
-.tweet-action:nth-child(1):hover {
-    background-color: blue;
+.tweet-action img{
+    padding: 10px;
+    border-radius: 10px;
 }
-.tweet-action:nth-child(2):hover {
-    background-color: green;
+
+
+.tweet-action:nth-child(1):hover img {
+    background-color: rgba(0, 0, 255, 0.3);
+    
 }
-.tweet-action:nth-child(3):hover {
-    background-color: red;
-} 
+.tweet-action:nth-child(1):hover span {
+    color: rgb(0, 0, 255);
+    
+}
+
+.tweet-action:nth-child(2):hover img {
+    background-color: rgba(0, 128, 0, 0.3);
+    
+}
+.tweet-action:nth-child(2):hover span {
+    color: rgb(0, 128, 0);
+    
+}
+.tweet-action:nth-child(3):hover img {
+    background-color: rgba(255, 0, 0, 0.3);
+    
+}
+.tweet-action:nth-child(3):hover span {
+    color: rgb(255, 0, 0);
+    
+}
+
+.tweet-action:nth-child(4):hover img {
+    background-color: rgba(29, 155, 240, 0.3);
+    
+}

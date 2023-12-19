@@ -2,13 +2,18 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import LikeTweet from "./LikeTweet";
 
+
+
 function TweetDetail({ tweet }) {
+
+
+
   return (
     <ul className="tweets">
       {tweet.map((element) => (
         <li key={element.id} className="tweet" id={element.id}>
           <aside className="tweet-avatar">
-            <Link to={"/username"}>
+            <Link to={`/username/${element.userId}`}>
               <img src={element.avatar} alt="photo profil" />
             </Link>
           </aside>
@@ -41,7 +46,7 @@ function TweetDetail({ tweet }) {
             <div className="tweet-actions">
               <LikeTweet element={element.countCommentaire} icon={element.iconCommentaire} text={"Reply"} />
               <LikeTweet element={element.countRetweet} icon={element.iconRetweet} text={"Repost"} />
-              <LikeTweet element={element.countLike} icon={element.iconLike} text={"Like"} />
+              <LikeTweet element={element.countLike} icon={ element.iconLike} text={"Like"} />
 
               <button className="tweet-action">
                 <img src={element.iconPartage} alt="" />
