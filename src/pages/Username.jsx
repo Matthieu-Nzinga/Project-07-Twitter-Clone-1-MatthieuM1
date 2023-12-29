@@ -8,7 +8,7 @@ import { SlCalender } from "react-icons/sl";
 import { RiUserFollowFill } from "react-icons/ri";
 
 function Username() {
-  const { id } = useParams();
+  const { id } = useParams(); 
 
   const oneUser = userProfil.find((user) => {
     return user.userId === parseInt(id);

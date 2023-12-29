@@ -239,3 +239,8 @@ body{
     background-color: rgba(29, 155, 240, 0.3);
     
 }
+
+.link-dom{
+    color: white;
+    text-decoration: none;
+}

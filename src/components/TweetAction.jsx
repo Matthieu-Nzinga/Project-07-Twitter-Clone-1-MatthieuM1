@@ -1,14 +1,12 @@
 import React from "react";
 import { dataIcons } from "../assets/Icon";
 
-
 function TweetAction() {
-
   return (
     <div className="tweet-editor-actions">
-      {dataIcons.map((element, index) => (
+      {dataIcons.map((icon, index) => (
         <button key={index}>
-          <img src={element} alt="" />
+          <img src={icon} alt="" />
         </button>
       ))}
     </div>

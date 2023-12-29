@@ -1,12 +1,12 @@
 import React from "react";
-import profilPhoto from "../images/profile-photo.png";
+import avatarImage from "../images/profile-photo.png";
 import TweetAction from "./TweetAction";
 
 function TweetEditor() {
   return (
     <div className="tweet-editor">
       <aside className="avatar">
-        <img src={profilPhoto} alt="" />
+        <img src={avatarImage} alt="" />
       </aside>
 
       <div className="tweet-editor-form">
