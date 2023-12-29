@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { FcLike } from "react-icons/fc";
+
 
 
 function LikeTweet({ element, icon, text }) {
@@ -16,10 +18,13 @@ function LikeTweet({ element, icon, text }) {
   };
   return (
     <button
-      onClick={(event) => {handleChange();}} className="tweet-action">
-      <img src={icon} alt="" title={text} />
+      onClick={(event) => {handleChange()}} className="tweet-action">
+       {
+        text === "Like" && isLikeTweet ? <div ><FcLike style={{ width: '20px' }}/></div> : <img src={icon} alt="" title={text} />
+       }
       <span>{likeTweet} </span>
     </button>
+    
   );
 }
 

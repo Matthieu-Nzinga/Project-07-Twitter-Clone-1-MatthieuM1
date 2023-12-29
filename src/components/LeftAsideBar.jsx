@@ -11,23 +11,28 @@ import { RiFileList2Line } from "react-icons/ri";
 import { HiOutlineUser } from "react-icons/hi";
 import { CiCircleMore } from "react-icons/ci";
 import Profile from "./Profile";
+import { Link } from "react-router-dom";
 
 function LeftAsideBar() {
   return (
     <div className="sidebar">
       <div className="sidebar-div">
-      <FaTwitter />
-      <LinkMenu icon={<RiHome7Fill />} title={"Home"} />
-      <LinkMenu icon={<SiSharp />} title={"Explore"} />
-      <LinkMenu icon={<IoMdNotifications />} title={"Notifications"} />
-      <LinkMenu icon={<HiOutlineEnvelope />} title={"Messages"} />
-      <LinkMenu icon={<CiBookmark />} title={"Bookmarks"} />
-      <LinkMenu icon={<RiFileList2Line />} title={"Lists"} />
-      <LinkMenu icon={<HiOutlineUser />} title={"Profile"} />
-      <LinkMenu icon={<CiCircleMore />} title={"More"} />
-      <button>Tweet</button>
+        <FaTwitter />
+        <Link to={"/"} className="link-dom">
+          <LinkMenu icon={<RiHome7Fill />} title={"Home"} />
+        </Link>
+        <LinkMenu icon={<SiSharp />} title={"Explore"} />
+        <LinkMenu icon={<IoMdNotifications />} title={"Notifications"} />
+        <LinkMenu icon={<HiOutlineEnvelope />} title={"Messages"} />
+        <LinkMenu icon={<CiBookmark />} title={"Bookmarks"} />
+        <LinkMenu icon={<RiFileList2Line />} title={"Lists"} />
+        <Link to={"/profileUser"} className="link-dom">
+          <LinkMenu icon={<HiOutlineUser />} title={"Profile"} />
+        </Link>
+        <LinkMenu icon={<CiCircleMore />} title={"More"} />
+        <button>Tweet</button>
       </div>
-      <Profile/>
+      <Profile />
     </div>
   );
 }

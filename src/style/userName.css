@@ -68,7 +68,7 @@
 }
 .user-avatar{
     width: 150px;
-
+    border-radius: 50%;
 }
 .user-suivi{
     padding: 20px;

@@ -207,6 +207,10 @@ body{
     padding: 10px;
     border-radius: 10px;
 }
+.tweet-action div{
+    padding: 0 9px;
+    border-radius: 10px;
+}
 
 
 .tweet-action:nth-child(1):hover img {
@@ -244,3 +248,4 @@ body{
     color: white;
     text-decoration: none;
 }
+

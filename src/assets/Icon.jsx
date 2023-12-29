@@ -13,9 +13,13 @@ import iconLikes4 from "../images/GroupL4.svg";
 import imageT from "../images/tweet-image.png";
 import imageT1 from "../images/image 1.png";
 import imageTweeters from "../images/image tweeter.png";
-import imageBanners from "../images/vecteezy_natural-background-landscape-photo-jogkradin-in-the-deep_14940680.jpg";
-import imageBanners1 from "../images/arrière-plan.jpg";
-import imageBanners2 from "../images/images.jpg";
+import imageBanners from "../images/arriere-plan-cnn.jpg";
+import imageBanners1 from "../images/arriere-plan-new.jpg";
+import imageBanners2 from "../images/arriere-plan-twitter.jpg";
+import avatarUserCnns from "../images/channels4_profile.jpg";
+import avatarUserTnt from "../images/bqp32una36b06hmbulla.png";
+import avatarUserTwitte from "../images/twitter.png";
+import avatarUserProfi from "../images/arriere-plan-profil.jpg";
 
 export const dataIcons = [icon, icon1, icon2, icon3, icon4];
 
@@ -32,3 +36,7 @@ export const imageTweeter = imageTweeters;
 export const imageBanner = imageBanners;
 export const imageBanner1 = imageBanners1;
 export const imageBanner2 = imageBanners2;
+export const avatarUserCnn = avatarUserCnns;
+export const avatarUserNew = avatarUserTnt;
+export const avatarUserTwitter = avatarUserTwitte;
+export const avatarUserProfil = avatarUserProfi;

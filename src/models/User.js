@@ -1,9 +1,9 @@
-import { iconCertifier, imageBanner, imageBanner1, imageBanner2, imageTs1, imageTweeter, imageTweets } from "../assets/Icon";
+import { avatarUserCnn, avatarUserNew, avatarUserTwitter, iconCertifier, imageBanner, imageBanner1, imageBanner2, imageTs1, imageTweeter, imageTweets } from "../assets/Icon";
 
 export const userProfil = [
     {
         userId: 1,
-        avatar: imageTweets,
+        avatar: avatarUserCnn,
         userName: "CNN",
         iconCertification : iconCertifier,
         banner:imageBanner,
@@ -19,7 +19,7 @@ export const userProfil = [
     },
     {
         userId: 2,
-        avatar: imageTs1,
+        avatar: avatarUserNew,
         userName: "The New York Times",
         iconCertification : iconCertifier,
         banner:imageBanner1,
@@ -35,7 +35,7 @@ export const userProfil = [
     },
     {
         userId: 3,
-        avatar: imageTweeter,
+        avatar: avatarUserTwitter,
         userName: "Twitter",
         iconCertification : iconCertifier,
         banner:imageBanner2,
