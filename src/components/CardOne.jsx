@@ -8,7 +8,7 @@ function CardOne() {
   return (
     <div className="card-one">
       <div className="setting">
-        <p>Trands for you</p>
+        <p>Trends for you</p>
         <CiSettings />
       </div>
 

@@ -6,12 +6,18 @@ import { GrLinkPrevious } from "react-icons/gr";
 import { RxLink2 } from "react-icons/rx";
 import { SlCalender } from "react-icons/sl";
 import { RiUserFollowFill } from "react-icons/ri";
+import TweetDetail from "../components/TweetDetail";
+import { tweets } from "../models/Database";
 
 function Username() {
-  const { id } = useParams(); 
+  const { id } = useParams();
 
   const oneUser = userProfil.find((user) => {
     return user.userId === parseInt(id);
+  });
+
+  const Twitters = tweets.filter((tweeter) => {
+    return tweeter.userId === oneUser.userId;
   });
 
   return (
@@ -73,6 +79,9 @@ function Username() {
         <li>Médias</li>
         <li>J'aime</li>
       </ul>
+      <div>
+        <TweetDetail tweet={Twitters} />
+      </div>
     </div>
   );
 }

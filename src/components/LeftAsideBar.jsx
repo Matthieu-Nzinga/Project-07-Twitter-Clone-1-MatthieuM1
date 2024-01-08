@@ -30,7 +30,7 @@ function LeftAsideBar() {
           <LinkMenu icon={<HiOutlineUser />} title={"Profile"} />
         </Link>
         <LinkMenu icon={<CiCircleMore />} title={"More"} />
-        <button>Tweet</button>
+        <button className="btn-aside">Tweet</button>
       </div>
       <Profile />
     </div>

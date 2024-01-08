@@ -145,6 +145,7 @@ export const squid = [
 
 export const follows = [
   {
+    userId : 2,
     id: 1,
     avatar: imageTs1,
     userName: "The New York Times",
@@ -152,6 +153,7 @@ export const follows = [
     lienProfil: "@nytimes",
   },
   {
+    userId : 1,
     id: 2,
     avatar: imageTweets,
     userName: "CNN",
@@ -159,6 +161,7 @@ export const follows = [
     lienProfil: "@CNN",
   },
   {
+    userId : 3,
     id: 3,
     avatar: imageTweeter,
     userName: "Twitter",

@@ -238,6 +238,10 @@ body{
     color: rgb(255, 0, 0);
     
 }
+.colorSpan {
+    color: rgb(244, 67, 54);
+    
+}
 
 .tweet-action:nth-child(4):hover img {
     background-color: rgba(29, 155, 240, 0.3);

@@ -22,7 +22,11 @@ function LikeTweet({ element, icon, text }) {
        {
         text === "Like" && isLikeTweet ? <div ><FcLike style={{ width: '20px' }}/></div> : <img src={icon} alt="" title={text} />
        }
-      <span>{likeTweet} </span>
+
+       {
+        text === "Like" && isLikeTweet ? <span className="colorSpan">{likeTweet} </span> : <span>{likeTweet} </span>
+       }
+      
     </button>
     
   );

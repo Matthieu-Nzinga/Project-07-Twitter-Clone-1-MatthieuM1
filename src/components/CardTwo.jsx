@@ -1,5 +1,6 @@
 import React from "react";
 import { follows } from "../models/Database";
+import { Link } from "react-router-dom";
 
 function CardTwo() {
   return (
@@ -8,10 +9,14 @@ function CardTwo() {
       {follows.map((element) => (
         <div className="card-two" key={element.id}>
           <div className="card-body">
-            <img className="card-two-img" src={element.avatar} alt="" />
+            <Link to={`/username/${element.userId}`}>
+              <img className="card-two-img" src={element.avatar} alt="" />
+            </Link>
             <div className="card-text">
               <h2>
-                <p>{element.userName} </p>
+                <Link to={`/username/${element.userId}`} className="link-dom">
+                  <p>{element.userName} </p>
+                </Link>
                 <img src={element.iconCertification} alt="" />
               </h2>
               <span>{element.lienProfil} </span>

@@ -14,7 +14,7 @@ import imageT from "../images/tweet-image.png";
 import imageT1 from "../images/image 1.png";
 import imageTweeters from "../images/image tweeter.png";
 import imageBanners from "../images/arriere-plan-cnn.jpg";
-import imageBanners1 from "../images/arriere-plan-new.jpg";
+import imageBanners1 from "../images/new.jpg";
 import imageBanners2 from "../images/arriere-plan-twitter.jpg";
 import avatarUserCnns from "../images/channels4_profile.jpg";
 import avatarUserTnt from "../images/bqp32una36b06hmbulla.png";
