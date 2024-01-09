@@ -7,14 +7,14 @@ function TweetDetail({ tweet }) {
       {tweet.map((element) => (
         <li key={element.id} className="tweet" id={element.id}>
           <aside className="tweet-avatar">
-            <Link to={`/username/${element.userId}`}>
+            <Link to={`/${element.dataTitles.userName}`}>
               <img src={element.avatar} alt="photo profil" />
             </Link>
           </aside>
           <div className="tweet-content">
             <div className="tweet-body">
               <h2 className="tweet-title">
-                <Link className="link-dom" to={`/username/${element.userId}`}>
+                <Link className="link-dom" to={`/${element.dataTitles.userName}`}>
                   <span className="tweet-title-author">
                     {element.dataTitles.userName}{" "}
                   </span>

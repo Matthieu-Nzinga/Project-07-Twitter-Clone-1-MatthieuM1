@@ -10,11 +10,14 @@ import TweetDetail from "../components/TweetDetail";
 import { tweets } from "../models/Database";
 
 function Username() {
-  const { id } = useParams();
+  const { userName } = useParams();
+  
+  console.log(userName);
 
   const oneUser = userProfil.find((user) => {
-    return user.userId === parseInt(id);
+    return user.userName == userName;
   });
+
 
   const Twitters = tweets.filter((tweeter) => {
     return tweeter.userId === oneUser.userId;
@@ -30,7 +33,7 @@ function Username() {
           <h2>
             {oneUser.userName} <img src={oneUser.iconCertification} alt="" />
           </h2>
-          <span className="username-span">{oneUser.posts} posts</span>
+          <span className="username-span">{Twitters.length} posts</span>
         </div>
       </div>
       <div className="user-content">

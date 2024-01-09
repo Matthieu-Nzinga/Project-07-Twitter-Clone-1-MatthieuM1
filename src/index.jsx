@@ -11,25 +11,24 @@ import("./style/reset.css");
 import("./style/App.css");
 
 const router = createBrowserRouter([
-  { 
+  {
     path: "/",
-    element:<Layout/>,
-    children:[
-      { 
+    element: <Layout />,
+    children: [
+      {
         path: "/",
-        element:<Home/>, 
+        element: <Home />,
       },
-      { 
+      {
         path: "/profileUser",
-        element:<ProfileUser/>, 
+        element: <ProfileUser />,
       },
-      { 
-        path: "/username/:id",
-        element:<Username/>, 
-      }
-    ] 
-  }
-   
+      {
+        path: ":userName",
+        element: <Username />,
+      },
+    ],
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

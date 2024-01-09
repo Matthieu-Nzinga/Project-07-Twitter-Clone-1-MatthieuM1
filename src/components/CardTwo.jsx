@@ -9,12 +9,12 @@ function CardTwo() {
       {follows.map((element) => (
         <div className="card-two" key={element.id}>
           <div className="card-body">
-            <Link to={`/username/${element.userId}`}>
+            <Link to={`/${element.userName}`}>
               <img className="card-two-img" src={element.avatar} alt="" />
             </Link>
             <div className="card-text">
               <h2>
-                <Link to={`/username/${element.userId}`} className="link-dom">
+                <Link to={`/${element.userName}`} className="link-dom">
                   <p>{element.userName} </p>
                 </Link>
                 <img src={element.iconCertification} alt="" />
