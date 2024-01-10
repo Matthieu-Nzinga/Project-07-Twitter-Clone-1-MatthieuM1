@@ -9,6 +9,7 @@ import ProfileUser from "./components/ProfileUser";
 
 import("./style/reset.css");
 import("./style/App.css");
+import("./style/index.css");
 
 const router = createBrowserRouter([
   {
