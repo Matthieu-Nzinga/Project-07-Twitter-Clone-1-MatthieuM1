@@ -3,18 +3,29 @@ import LikeTweet from "./LikeTweet";
 
 function TweetDetail({ tweet }) {
   return (
-    <ul className="tweets">
+    <ul>
       {tweet.map((element) => (
-        <li key={element.id} className="tweet" id={element.id}>
-          <aside className="tweet-avatar">
+        <li
+          className="flex justify-start items-start gap-5 py-6 px-4 border-b border-solid border-gray-700"
+          key={element.id}
+          id={element.id}
+        >
+          <aside className="w-20 h-20 flex-shrink-0 flex-grow-0 flex-basis-70">
             <Link to={`/${element.dataTitles.userName}`}>
-              <img src={element.avatar} alt="photo profil" />
+              <img
+                className="max-w-full max-h-25 rounded-full"
+                src={element.avatar}
+                alt="photo profil"
+              />
             </Link>
           </aside>
-          <div className="tweet-content">
+          <div className="flex flex-col items-start justify-start gap-7.5 w-full">
             <div className="tweet-body">
               <h2 className="tweet-title">
-                <Link className="link-dom" to={`/${element.dataTitles.userName}`}>
+                <Link
+                  className="link-dom"
+                  to={`/${element.dataTitles.userName}`}
+                >
                   <span className="tweet-title-author">
                     {element.dataTitles.userName}{" "}
                   </span>
