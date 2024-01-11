@@ -215,7 +215,7 @@ body{
 
 
 .tweet-action:nth-child(1):hover img {
-    background-color: rgba(0, 0, 255, 0.3);
+    background-color: rgba(0, 0, 255, 0.302);
     
 }
 .tweet-action:nth-child(1):hover span {
