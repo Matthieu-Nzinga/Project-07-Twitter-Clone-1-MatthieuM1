@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { FcLike } from "react-icons/fc";
 
-
-
-function LikeTweet({ element, icon, text }) {
+function LikeTweet({ element, icon, text, hoverStyle, spanStyle }) {
   const [likeTweet, setLikeTweet] = useState(element);
   const [isLikeTweet, setIsLikeTweet] = useState(false);
 
@@ -18,17 +16,30 @@ function LikeTweet({ element, icon, text }) {
   };
   return (
     <button
-      onClick={(event) => {handleChange()}} className="tweet-action">
-       {
-        text === "Like" && isLikeTweet ? <div ><FcLike style={{ width: '20px' }}/></div> : <img src={icon} alt="" title={text} />
-       }
+      onClick={(event) => {
+        handleChange();
+      }}
+      className={`flex items-center justify-center gap-2.5 max-w-max relative group`}
+    >
+      {text === "Like" && isLikeTweet ? (
+        <div className="px-2">
+          <FcLike style={{ width: "20px" }} />
+        </div>
+      ) : (
+        <img
+          className={`p-2.5 rounded-xl ${hoverStyle}`}
+          src={icon}
+          alt=""
+          title={text}
+        />
+      )}
 
-       {
-        text === "Like" && isLikeTweet ? <span className="colorSpan">{likeTweet} </span> : <span>{likeTweet} </span>
-       }
-      
+      {text === "Like" && isLikeTweet ? (
+        <span className={`text-orange-600 `}>{likeTweet} </span>
+      ) : (
+        <span className={`${spanStyle}`}>{likeTweet} </span>
+      )}
     </button>
-    
   );
 }
 
