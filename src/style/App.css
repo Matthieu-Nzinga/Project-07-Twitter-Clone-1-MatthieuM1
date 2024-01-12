@@ -1,75 +1,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 
-body{
+/* body{
     background-color: black;
     color: white;
     margin: 0 auto;
     max-width: 1800px;
-}
+} */
 
-#root{
+/* #root{
     width: 100%;
     display: flex;
     justify-content: center;
     gap: 50px;
-}
+} */
 
-.timeline {
+/* .timeline {
     flex: 0 0 800px;
     font-family: 'Inter', sans-serif;
     border-left: 1px solid #2F3336;
     border-right: 1px solid #2F3336;
-}
+} */
 
-.header {
+/* .header {
     padding: 1.5rem 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #2F3336;
-}
+} */
 
-.header button {
+/* .header button {
     background-color: transparent;
     border: none;
-}
+} */
 
-.top-tweets {
+/* .top-tweets {
     width: 1.5rem;
     height: auto;
-}
+} */
 
-.page-title {
+/* .page-title {
     font-size: 1.5rem;
     font-weight: bold;
-}
+} */
 
-.tweet-editor {
+/* .tweet-editor {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     gap: 20px;
     padding:  .3rem 1rem;
     border-bottom: 1px solid #2F3336;
-}
+} */
 
-.avatar {
+/* .avatar {
     flex: 0 0 70px;
-    /*padding: 0 rem;*/
-}
+} */
 
-.avatar img {
+/* .avatar img {
     max-width: 100%;
     max-height: 100px;
     border-radius: 100%;
-}
+} */
 
-.tweet-editor-form {
+/* .tweet-editor-form {
     flex: auto;
-}
+} */
 
-.tweet-editor-input {
+/* .tweet-editor-input {
     height: 60px;
     width: 100%;
     border: none;
@@ -80,26 +79,26 @@ body{
     resize: none;
     padding: 10px 0 0 0;
     margin: 13px 0;
-}
+} */
 
-.tweet-editor-buttons {
+/* .tweet-editor-buttons {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
+} */
 
-.tweet-editor-actions {
+/* .tweet-editor-actions {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    /*padding: 0.8rem 0;*/
+    
     gap: 1rem;
-}
-.tweet-editor-actions button {
+} */
+/* .tweet-editor-actions button {
     background-color: transparent;
     border: none;
-}
-.button {
+} */
+/* .button {
     text-transform: capitalize;
     padding: .7rem 1.5rem;
     border: none;
@@ -107,8 +106,8 @@ body{
     background-color: #1D9BF0;
     color: white;
     font-size: 1rem;
-}
-.tweet{
+} */
+/* .tweet{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -252,5 +251,5 @@ body{
 .link-dom{
     color: white;
     text-decoration: none;
-}
+} */
 

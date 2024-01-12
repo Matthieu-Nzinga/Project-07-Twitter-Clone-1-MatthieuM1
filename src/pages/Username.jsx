@@ -24,7 +24,7 @@ function Username() {
   });
 
   return (
-    <div className="timeline">
+    <div className="w-[800px] border-x-[1px] border-solid border-gray-700">
       <div className="username-entete">
         <Link to={"/"} className="link-white">
           <GrLinkPrevious />

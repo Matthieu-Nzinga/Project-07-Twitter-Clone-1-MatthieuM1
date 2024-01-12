@@ -4,10 +4,10 @@ import { iconsn } from "../assets/Icon";
 
 function Header() {
   return (
-    <div className="header">
-      <h1 className="page-title">Home</h1>
+    <div className="flex items-center justify-between py-[1.5rem] px-[1rem] border-b border-solid border-gray-700">
+      <h1 className="text-[1.5rem] font-bold">Home</h1>
       <button>
-        <img className="top-tweets" src={iconsn} alt="" />
+        <img className="w-[1.5rem] h-auto " src={iconsn} alt="" />
       </button>
     </div>
   );
