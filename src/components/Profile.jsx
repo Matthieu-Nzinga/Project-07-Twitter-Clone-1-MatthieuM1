@@ -1,23 +1,26 @@
 import React from "react";
-import profilPhoto from "../images/profile-photo.png";
 import { RiLock2Fill } from "react-icons/ri";
 import { Link } from "react-router-dom";
+import { userProfil } from "../models/User";
 
 function Profile() {
+  const userP = userProfil.find((user) => user.isLogin === true);
+
   return (
     <div className="profil">
-      <Link to={"/profileUser"} className="link-white">
-        <img src={profilPhoto} alt="" />
+      <Link to={`/${userP.userName}`} className="link-white">
+        <img src={userP.avatar} alt="" />
       </Link>
 
       <div>
         <div className="profil-div">
-        <Link to={"/profileUser"} className="link-dom">
-          <p>Brandley Ortiz</p>
+          <Link to={`/${userP.userName}`} className="link-dom">
+            <p>{userP.userName} </p>
           </Link>
           <RiLock2Fill />
         </div>
-        <span>@brandley</span>
+
+        <span>{userP.lienProfil} </span>
       </div>
     </div>
   );

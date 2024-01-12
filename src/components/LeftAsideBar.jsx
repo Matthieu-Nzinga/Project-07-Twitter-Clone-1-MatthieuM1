@@ -12,8 +12,11 @@ import { HiOutlineUser } from "react-icons/hi";
 import { CiCircleMore } from "react-icons/ci";
 import Profile from "./Profile";
 import { Link } from "react-router-dom";
+import { userProfil } from "../models/User";
 
 function LeftAsideBar() {
+  const userP = userProfil.find((user) => user.isLogin === true);
+
   return (
     <div className="sidebar">
       <div className="sidebar-div">
@@ -26,7 +29,7 @@ function LeftAsideBar() {
         <LinkMenu icon={<HiOutlineEnvelope />} title={"Messages"} />
         <LinkMenu icon={<CiBookmark />} title={"Bookmarks"} />
         <LinkMenu icon={<RiFileList2Line />} title={"Lists"} />
-        <Link to={"/profileUser"} className="link-dom">
+        <Link to={`/${userP.userName}`} className="link-dom">
           <LinkMenu icon={<HiOutlineUser />} title={"Profile"} />
         </Link>
         <LinkMenu icon={<CiCircleMore />} title={"More"} />

@@ -11,7 +11,7 @@ import {
 } from "../assets/Icon";
 
 export const tweets = [
-  {
+  { 
     userId : 1,
     id: 1,
     avatar: imageTweets,
