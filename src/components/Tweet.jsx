@@ -1,12 +1,14 @@
 import React from "react";
 import TweetDetail from "./TweetDetail";
-import { tweets } from "../models/Database";
+import { useTweetContext } from "../models/TweetContext";
+
 
 function Tweet() {
+  const { tweet } = useTweetContext();
   
   return (
     <div className="tweets">
-      <TweetDetail tweet={tweets} />
+      <TweetDetail tweet={tweet} />
     </div>
   );
 }

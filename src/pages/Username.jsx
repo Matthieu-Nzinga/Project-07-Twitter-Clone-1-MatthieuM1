@@ -8,20 +8,21 @@ import { SlCalender } from "react-icons/sl";
 import { RiUserFollowFill } from "react-icons/ri";
 import TweetDetail from "../components/TweetDetail";
 import { tweets } from "../models/Database";
+import { useTweetContext } from "../models/TweetContext";
 
 function Username() {
   const { userName } = useParams();
-  
-  console.log(userName);
 
   const oneUser = userProfil.find((user) => {
     return user.userName == userName;
   });
 
-
-  const Twitters = tweets.filter((tweeter) => {
+  const { tweet } = useTweetContext();
+  const Twitters = tweet.filter((tweeter) => {
     return tweeter.userId === oneUser.userId;
   });
+
+  console.log(Twitters.countLike);
 
   return (
     <div className="w-[800px] border-x-[1px] border-solid border-gray-700">

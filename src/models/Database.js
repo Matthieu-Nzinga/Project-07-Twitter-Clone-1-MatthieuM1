@@ -36,6 +36,8 @@ export const tweets = [
     countLike: 184,
 
     iconPartage: iconLike4,
+
+    isLikeTweet: false,
   },
   {
     userId : 2,
@@ -61,6 +63,8 @@ export const tweets = [
     countLike: 482,
 
     iconPartage: iconLike4,
+
+    isLikeTweet: false,
   },
   {
     userId : 3,
@@ -85,6 +89,8 @@ export const tweets = [
     countLike: 267,
 
     iconPartage: iconLike4,
+
+    isLikeTweet: false,
   },
   {
     userId : 3,
@@ -109,6 +115,8 @@ export const tweets = [
     countLike: 10,
 
     iconPartage: iconLike4,
+
+    isLikeTweet: false,
   },
 ];
 

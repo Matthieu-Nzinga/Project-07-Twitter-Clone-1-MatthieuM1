@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import LikeTweet from "./LikeTweet";
 
 function TweetDetail({ tweet }) {
+  console.log("detail", tweet);
   return (
     <ul>
       {tweet.map((element) => (
@@ -11,7 +12,7 @@ function TweetDetail({ tweet }) {
           id={element.id}
         >
           <aside className="w-20 h-20 flex-shrink-0 flex-grow-0 flex-basis-70">
-            <Link to={`/${element.dataTitles.userName}`}>
+            <Link to={`/${element?.dataTitles?.userName}`}>
               <img
                 className="max-w-full max-h-25 rounded-full"
                 src={element.avatar}
@@ -24,21 +25,21 @@ function TweetDetail({ tweet }) {
               <h2 className="flex justify-start items-start gap-2.5 text-base">
                 <Link
                   className="text-white no-underline"
-                  to={`/${element.dataTitles.userName}`}
+                  to={`/${element?.dataTitles?.userName}`}
                 >
                   <span className="text-base">
-                    {element.dataTitles.userName}{" "}
+                    {element?.dataTitles?.userName}{" "}
                   </span>
                 </Link>
                 <img className="w-5 h-auto"
-                  src={element.dataTitles.iconCertification}
+                  src={element?.dataTitles?.iconCertification}
                   alt="icon de certification"
                 />
                 <span className="text-gray-500">
-                  {element.dataTitles.lienProfil}{" "}
+                  {element?.dataTitles?.lienProfil}{" "}
                 </span>
                 <span className="text-gray-500">
-                  {element.dataTitles.time}{" "}
+                  {element?.dataTitles?.time}{" "}
                 </span>
               </h2>
 
@@ -50,28 +51,23 @@ function TweetDetail({ tweet }) {
               ) : null}
             </div>
             <div className="flex justify-center items-center gap-16 text-gray-500 text-base pt-2.5">
-              <LikeTweet 
-                element={element.countCommentaire}
-                icon={element.iconCommentaire}
-                text={"Reply"}
-                hoverStyle="group-hover:bg-blue-700"
-                spanStyle="group-hover:text-blue-700"
-              />
+              <button className="flex items-center justify-center gap-2.5 max-w-max group">
+                <img className="p-2.5 rounded-xl group-hover:bg-blue-700" src={element.iconCommentaire} alt="" title="Repost"/>
+                <span className="group-hover:text-blue-700">{element.countCommentaire} </span>
+              </button>
+              <button className="flex items-center justify-center gap-2.5 max-w-max group">
+                <img className="p-2.5 rounded-xl group-hover:bg-green-300" src={element.iconRetweet} alt="" title="Repost"/>
+                <span className="group-hover:text-green-300">{element.countRetweet} </span>
+              </button>
               <LikeTweet
-                element={element.countRetweet}
-                icon={element.iconRetweet}
-                text={"Repost"}
-                hoverStyle="group-hover:bg-green-300"
-                spanStyle="group-hover:text-green-300"
-              />
-              <LikeTweet
+                id={element.id}
                 element={element.countLike}
                 icon={element.iconLike}
                 text={"Like"}
                 hoverStyle="group-hover:bg-pink-600"
                 spanStyle="group-hover:text-pink-600"
+                isLikeTweet={element.isLikeTweet}
               />
-
               <button className="flex items-center justify-center gap-2.5 max-w-max">
                 <img className="p-2.5 rounded-xl hover:bg-blue-500" src={element.iconPartage} alt="" title="Shar"/>
               </button>
