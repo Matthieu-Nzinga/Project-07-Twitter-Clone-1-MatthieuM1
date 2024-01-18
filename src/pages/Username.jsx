@@ -1,19 +1,19 @@
-import React from "react";
-import "../style/userName.css";
+import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { userProfil } from "../models/User";
+
 import { GrLinkPrevious } from "react-icons/gr";
 import { RxLink2 } from "react-icons/rx";
 import { SlCalender } from "react-icons/sl";
 import { RiUserFollowFill } from "react-icons/ri";
 import TweetDetail from "../components/TweetDetail";
-import { tweets } from "../models/Database";
 import { useTweetContext } from "../models/TweetContext";
+import UserAffiliate from "../components/UserAffiliate";
 
 function Username() {
   const { userName } = useParams();
+  const { userProfils } = useTweetContext();
 
-  const oneUser = userProfil.find((user) => {
+  const oneUser = userProfils.find((user) => {
     return user.userName == userName;
   });
 
@@ -22,70 +22,81 @@ function Username() {
     return tweeter.userId === oneUser.userId;
   });
 
-  console.log(Twitters.countLike);
+  const [selectedTab, setSelectedTab] = useState("posts");
+
+  const handleTabClick = (tab) => {
+    setSelectedTab(tab);
+  };
 
   return (
     <div className="w-[800px] border-x-[1px] border-solid border-gray-700">
-      <div className="username-entete">
-        <Link to={"/"} className="link-white">
+      <div className="p-5 flex items-center gap-10 ">
+        <Link to={"/"}>
           <GrLinkPrevious />
         </Link>
-        <div>
-          <h2>
-            {oneUser.userName} <img src={oneUser.iconCertification} alt="" />
+        <div >
+          <h2 className="flex items-center gap-2">
+            {oneUser?.userName} <img src={oneUser?.iconCertification} alt="" />
           </h2>
-          <span className="username-span">{Twitters.length} posts</span>
+          <span className="text-gray-400 text-sm">{Twitters.length} posts</span>
         </div>
       </div>
-      <div className="user-content">
-        <img className="banner" src={oneUser.banner} alt="" />
-        <div className="user-avatar">
-          <img className="user-avatar" src={oneUser.avatar} alt="" />
-          <div className="user-profil">
-            <p>{oneUser.points} </p>
-            <button className="follow">Follow</button>
+      <div className="max-h-[350px] w-full relative ">
+        <img className="w-full max-h-[350px] " src={oneUser?.banner} alt="" />
+        <div className="absolute bottom-[-40px] pl-5 flex w-[150px] ">
+          <img className="absolute bottom-[-40px] pl-50 flex rounded-full " src={oneUser?.avatar} alt="" />
+          <div className="flex items-center gap-3 absolute bottom-[-35px] right-[-630px] ">
+            <p className="w-10 h-10 border border-white text-center rounded-full pt-[2px] ">{oneUser?.points} </p>
+            <button className="bg-white text-black px-5 py-2 text-xl">Follow</button>
           </div>
         </div>
       </div>
-      <div className="user-text">
-        <h2>
-          {oneUser.userName} <img src={oneUser.iconCertification} alt="" />
+      <div className="mt-[70px] p-5">
+        <h2 className="flex items-center gap-2">
+          {oneUser?.userName} <img src={oneUser?.iconCertification} alt="" />
         </h2>
-        <span className="username-span">{oneUser.lienProfil} </span>
+        <span className="text-gray-400 text-sm">{oneUser?.lienProfil} </span>
       </div>
-      <p className="user-description">{oneUser.description} </p>
-      <div className="user-link-content">
-        <div>
+      <p className="px-5 text-justify">{oneUser?.description} </p>
+      <div className="p-5 flex items-center gap-4">
+        <div className="flex items-center gap-1">
           <RxLink2 />
-          <span className="username-link">{oneUser.linkWeb} </span>
+          <span className="text-[#1D9BF0] ">{oneUser?.linkWeb} </span>
         </div>
-        <div>
+        <div className="flex items-center gap-1">
           <SlCalender />
-          <span className="username-span">{oneUser.dateCreated} </span>
+          <span className="text-gray-400 text-sm">{oneUser?.dateCreated} </span>
         </div>
       </div>
-      <div className="user-abonne">
+      <div className="px-5 flex gap-8"> 
         <p>
-          {oneUser.abonnemets} <span className="username-span">abonnemets</span>
+          {oneUser?.abonnemets} <span className="text-gray-400 text-sm">abonnemets</span>
         </p>
         <p>
-          {oneUser.abonne} <span className="username-span">abonnés</span>
+          {oneUser?.abonne} <span className="text-gray-400 text-sm">abonnés</span>
         </p>
       </div>
-      <div className="user-suivi">
+      <div className="p-5 flex items-center gap-2.5">
         <RiUserFollowFill />
-        <span className="username-span">{oneUser.suiviPar} </span>
+        <span className="text-gray-400 text-sm">{oneUser?.suiviPar} </span>
       </div>
-      <ul className="user-ul">
-        <li>Posts</li>
-        <li>Affiliés</li>
-        <li>Réponses</li>
-        <li>Médias</li>
-        <li>J'aime</li>
+      <ul className="py-4 px-8 flex justify-between border-b border-gray-500 list-none">
+        <li className={selectedTab === "posts" ? "cursor-pointer active" : "cursor-pointer"} onClick={() => handleTabClick("posts")}>Posts</li>
+        <li className={selectedTab === "affilies" ? "cursor-pointer active" : "cursor-pointer"} onClick={() => handleTabClick("affilies")}>Affiliés</li>
+        <li className={selectedTab === "reponse" ? "cursor-pointer active" : "cursor-pointer"} onClick={() => handleTabClick("reponse")}>Réponses</li>
+        <li className={selectedTab === "media" ? "cursor-pointer active" : "cursor-pointer"} onClick={() => handleTabClick("media")}>Médias</li>
+        <li className={selectedTab === "aime" ? "cursor-pointer active" : "cursor-pointer"} onClick={() => handleTabClick("aime")}>J'aime</li>
       </ul>
-      <div>
-        <TweetDetail tweet={Twitters} />
-      </div>
+      {selectedTab === "posts" && (
+        <div>
+          <TweetDetail tweet={Twitters} userProfil={userProfils}/>
+        </div>
+      )}
+      {selectedTab === "affilies" && (
+        <div>
+          <UserAffiliate/>
+        </div>
+      )}
     </div>
   );
 }

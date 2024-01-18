@@ -7,11 +7,11 @@ import { TweetProvider } from "../models/TweetContext";
 function Layout({ children }) {
   return (
     <>
-      <LeftAsideBar />
       <TweetProvider>
+        <LeftAsideBar />
         <Outlet />
+        <RightAsideBar />
       </TweetProvider>
-      <RightAsideBar />
     </>
   );
 }
