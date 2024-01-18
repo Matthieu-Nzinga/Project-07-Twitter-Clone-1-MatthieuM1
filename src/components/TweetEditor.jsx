@@ -84,7 +84,7 @@ function TweetEditor() {
             <TweetAction />
           </div>
           <button
-            className="bg-blue-500 font-base text-white py-[.7rem] px-[1.5rem] "
+            className="bg-blue-500 font-base text-white py-[.7rem] px-[1.5rem] rounded-full"
             onClick={handleCreatePost}
           >
             Tweet

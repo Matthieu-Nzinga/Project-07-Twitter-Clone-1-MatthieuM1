@@ -1,12 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Username from "./pages/Username";
 import Layout from "./components/layout";
 import Home from "./pages/home";
-
-import("./style/reset.css");
 import("./style/App.css");
 import("./style/index.css");
 
