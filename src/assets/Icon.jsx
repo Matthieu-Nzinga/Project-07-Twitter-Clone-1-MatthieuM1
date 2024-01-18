@@ -21,7 +21,7 @@ import avatarUserTnt from "../images/bqp32una36b06hmbulla.png";
 import avatarUserTwitte from "../images/twitter.png";
 import avatarUserProfi from "../images/arriere-plan-profil.jpg";
 
-export const dataIcons = [icon, icon1, icon2, icon3, icon4];
+export const dataIcons = [ icon1, icon2, icon3, icon4];
 
 export const iconsn = icons;
 export const imageTweets = imageTweet;
@@ -40,3 +40,4 @@ export const avatarUserCnn = avatarUserCnns;
 export const avatarUserNew = avatarUserTnt;
 export const avatarUserTwitter = avatarUserTwitte;
 export const avatarUserProfil = avatarUserProfi;
+export const iconPhoto = icon;

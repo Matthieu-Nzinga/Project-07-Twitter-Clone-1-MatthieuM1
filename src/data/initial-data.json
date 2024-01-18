@@ -1,0 +1,116 @@
+
+ {
+    "userProfil": [
+      {
+        "userId": 0,
+        "avatar": "/src/images/profile-photo.png" ,
+        "userName": "Brandley Ortiz",
+        "iconCertification": "/src/images/certifier.png",
+        "banner": "/src/images/arriere-plan-profil.jpg",
+        "lienProfil": "@brandley",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit...",
+        "points": "...",
+        "linkWeb": "brandley.com",
+        "dateCreated": "A rejoint Twitter en février 2001",
+        "abonnemets": 4086,
+        "abonne": "100 M",
+        "suiviPar": "Suivi par Benito et Matthieu Nzing",
+        "isLogin": true
+      },
+      {
+        "userId": 1,
+        "avatar": "/src/images/channels4_profile.jpg",
+        "userName": "CNN",
+        "iconCertification": "/src/images/certifier.png",
+        "banner": "/src/images/arriere-plan-cnn.jpg",
+        "lienProfil": "@CNN",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit...",
+        "points": "...",
+        "linkWeb": "cnn.com",
+        "dateCreated": "A rejoint Twitter en février 2007",
+        "abonnemets": 1086,
+        "abonne": "62 M",
+        "suiviPar": "Suivi par Benito et PlayStation",
+        "isLogin": false
+      },
+      {
+        "userId": 2,
+        "avatar": "/src/images/bqp32una36b06hmbulla.png",
+        "userName": "The New York Times",
+        "iconCertification": "/src/images/certifier.png",
+        "banner": "/src/images/new.jpg",
+        "lienProfil": "@nytimes",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit...",
+        "points": "...",
+        "linkWeb": "nytimes.com",
+        "dateCreated": "A rejoint Twitter en février 2012",
+        "abonnemets": 2086,
+        "abonne": "72 M",
+        "suiviPar": "Suivi par Matthieu et Ligue des champions",
+        "isLogin": false
+      },
+      {
+        "userId": 3,
+        "avatar": "/src/images/twitter.png",
+        "userName": "Twitter",
+        "iconCertification": "/src/images/certifier.png",
+        "banner": "/src/images/arriere-plan-twitter.jpg",
+        "lienProfil": "@Twitter",
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit...",
+        "points": "...",
+        "linkWeb": "twitter.com",
+        "dateCreated": "A rejoint Twitter en février 2005",
+        "abonnemets": 9850,
+        "abonne": "995 M",
+        "suiviPar": "Suivi par Sacre et Sylvin",
+        "isLogin": false
+      }
+    ],
+    "tweets": [
+        {
+          "userId": 1,
+          "id": 1,
+          "tweetImage": null,
+          "time": "7m",
+          "description": "President Joe Biden touted a new agreement reached with the European Union to ease Trump-era tariffs on aluminum and steel as a major breakthrough that would serve to both strengthen the US steel industry and combat the global climate crisis.",
+          "countCommentaire": 57,
+          "countRetweet": 144,
+          "countLike": 184,
+          "isLikeTweet": false
+        },
+        {
+          "userId": 2,
+          "id": 2,
+          "tweetImage": "/src/images/tweet-image.png",
+          "time": "2h",
+          "description": "Gardening boomed during the pandemic. Six Black writers share how it has helped them re-establish, and reimagine, a connection to cultivation and the land.",
+          "countCommentaire": 19,
+          "countRetweet": 48,
+          "countLike": 482,
+          "isLikeTweet": false
+        },
+        {
+          "userId": 3,
+          "id": 3,
+          "tweetImage": null,
+          "time": "Oct 29",
+          "description": "BIG NEWS lol jk still Twitter",
+          "countCommentaire": 68,
+          "countRetweet": 366,
+          "countLike": 267,
+          "isLikeTweet": false
+        },
+        {
+          "userId": 3,
+          "id": 4,
+          "tweetImage": null,
+          "time": "Oct 4",
+          "description": "hello literally everyone",
+          "countCommentaire": 51,
+          "countRetweet": 10,
+          "countLike": 10,
+          "isLikeTweet": false
+        }
+      ]
+  }
+  
