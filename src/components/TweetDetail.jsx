@@ -3,7 +3,7 @@ import LikeTweet from "./LikeTweet";
 import { iconCertifier, iconLike1, iconLike2, iconLike3, iconLike4 } from "../assets/Icon";
 
 function TweetDetail({ tweet, userProfil }) {
-  console.log(tweet);
+  
   return (
     <ul>
       {tweet.map((element) => {
