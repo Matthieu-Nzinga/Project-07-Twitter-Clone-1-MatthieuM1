@@ -25,7 +25,7 @@ function TweetEditor() {
   const handleCreatePost = () => {
     const id = Math.floor(Math.random() * (1000 - 5));
 
-    const pos = {
+    const post = {
       userId: userP.userId,
       id: id,
       tweetImage: selectedImage,
@@ -37,7 +37,8 @@ function TweetEditor() {
       isLikeTweet: false,
     };
     setDescription("");
-    addTweet(pos);
+    setSelectedImage(null);
+    addTweet(post);
   };
 
   const handleImageChange = (event) => {
