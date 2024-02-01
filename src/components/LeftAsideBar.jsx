@@ -18,7 +18,7 @@ function LeftAsideBar() {
   const userP = userProfils.find((user) => user.isLogin === true);
 
   return (
-    <div className="w-[270px] h-screen py-10 relative">
+    <div className="w-[270px] h-screen py-10 relative ">
       <div className="flex flex-col gap-4 text-lg fixed left-12">
         <FaTwitter />
         <Link to={"/"}>
@@ -33,7 +33,7 @@ function LeftAsideBar() {
           <LinkMenu icon={<HiOutlineUser />} title={"Profile"} />
         </Link>
         <LinkMenu icon={<CiCircleMore />} title={"More"} />
-        <button className="bg-blue-500 py-3 px-24 rounded-full">Tweet</button>
+        <button className="bg-blue-500 py-3 px-24 rounded-full ">Tweet</button>
       </div>
       <Profile />
     </div>

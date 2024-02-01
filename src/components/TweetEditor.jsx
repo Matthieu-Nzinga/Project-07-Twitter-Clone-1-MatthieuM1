@@ -41,6 +41,7 @@ function TweetEditor() {
     addTweet(post);
   };
 
+
   const handleImageChange = (event) => {
     const file = event.target.files[0];
     const reader = new FileReader();
@@ -48,6 +49,7 @@ function TweetEditor() {
       setSelectedImage(e.target.result);
     };
     reader.readAsDataURL(file);
+    event.target.value = null;
   };
 
   return (
