@@ -66,12 +66,16 @@ const CreateTweet = () => {
     <div className="flex-auto">
       <form onSubmit={handleSubmit((data) => handleCreatePost(data))}>
         <input
-          {...register("description")}
+          {...register("description", { maxLength: 180 })}
           className="h-[60px] w-full border-none outline-none text-white bg-black p-10 resize-none text-lg my-13 text-xl"
           type="text"
           placeholder="What's happening?"
         />
-
+        {errors.description && (
+          <p className="bold text-red-700">
+            Ce champ ne doit pas dépasser 180 caractères.
+          </p>
+        )}
         <div className="flex items-center justify-between">
           <div className="flex items-center justify-start gap-4">
             <label htmlFor={`file-input`} className="relative cursor-pointer">
