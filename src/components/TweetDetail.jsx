@@ -1,12 +1,39 @@
 import { Link } from "react-router-dom";
 import LikeTweet from "./LikeTweet";
 import { iconCertifier, iconLike1, iconLike2, iconLike3, iconLike4 } from "../assets/Icon";
+import { useTweetContext } from "../models/TweetContext";
 
 function TweetDetail({ tweet, userProfil }) {
+
+  console.log(tweet);
+
+  const { loading } = useTweetContext();
   
+  const sortedTweets = tweet.sort((a, b) => {
+    const timeA = a.time.split(':').map(Number); 
+    const timeB = b.time.split(':').map(Number);
+    return timeB[0] - timeA[0] || timeB[1] - timeA[1]; 
+  });
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <div className="animate-spin rounded-full h-32 w-32 border-t-4 border-b-4 border-blue-500"></div>
+      </div>
+    );
+  }
+
+  if (tweet.length == 0) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <div className="text-red-300 text-2xl font-bold">Aucune donnée disponible</div>
+      </div>
+    );
+  }
+
   return (
     <ul>
-      {tweet.map((element) => {
+      {sortedTweets.map((element) => {
         const user = userProfil?.find((use) => use.userId === element.userId);
        
         return (

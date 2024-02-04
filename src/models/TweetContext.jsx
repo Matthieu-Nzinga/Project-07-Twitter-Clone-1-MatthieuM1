@@ -11,20 +11,38 @@ export const TweetProvider = ({ children }) => {
   const [tweet, setTweet] = useState([]);
   const [userProfils, setPserProfils] = useState([]);
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     axios
-      .get("/src/data/initial-data.json")
+      .get("http://localhost:8000/userProfil")
       .then((response) => {
-        setTweet(response.data.tweets);
-        setPserProfils(response.data.userProfil);
+        setPserProfils(response.data);
+        setLoading(false);
       })
       .catch((error) => {
         console.error("Erreur lors de la récupération des tweets : ", error);
+        setLoading(false);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:8000/tweets")
+      .then((response) => {
+        setTweet(response.data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Erreur lors de la récupération des tweets : ", error);
+        setLoading(false);
       });
   }, []);
 
   const addTweet = (newTweet) => {
-    setTweet([newTweet, ...tweet]);
+    axios
+      .post("http://localhost:8000/tweets", newTweet)
+      .then((response) => setTweet([response.data, ...tweet]));
   };
 
   const toggleLike = (tweetId) => {
@@ -44,7 +62,7 @@ export const TweetProvider = ({ children }) => {
     setTweet(updatedTweets);
   };
   return (
-    <TweetContext.Provider value={{ userProfils, tweet, addTweet, toggleLike }}>
+    <TweetContext.Provider value={{ userProfils, tweet, addTweet, toggleLike, loading}}>
       {children}
     </TweetContext.Provider>
   );
