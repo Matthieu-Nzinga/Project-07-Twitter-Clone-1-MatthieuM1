@@ -1,23 +1,23 @@
 import { Link } from "react-router-dom";
 import LikeTweet from "./LikeTweet";
-import { iconCertifier, iconLike1, iconLike2, iconLike3, iconLike4 } from "../assets/Icon";
+import {
+  iconCertifier,
+  iconLike1,
+  iconLike2,
+  iconLike3,
+  iconLike4,
+} from "../assets/Icon";
 import { useTweetContext } from "../models/TweetContext";
+import { formatTweetDate } from "../models/Database";
 
 function TweetDetail({ tweet, userProfil }) {
-
-  console.log(tweet);
-
   const { loading } = useTweetContext();
-  
-  const sortedTweets = tweet.sort((a, b) => {
-    const timeA = a.time.split(':').map(Number); 
-    const timeB = b.time.split(':').map(Number);
-    return timeB[0] - timeA[0] || timeB[1] - timeA[1]; 
-  });
+
+  tweet.sort((a, b) => new Date(b.time) - new Date(a.time));
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-screen">
+      <div className="flex items-center justify-center h-[400px]">
         <div className="animate-spin rounded-full h-32 w-32 border-t-4 border-b-4 border-blue-500"></div>
       </div>
     );
@@ -25,17 +25,20 @@ function TweetDetail({ tweet, userProfil }) {
 
   if (tweet.length == 0) {
     return (
-      <div className="flex items-center justify-center h-screen">
-        <div className="text-red-300 text-2xl font-bold">Aucune donnée disponible</div>
+      <div className="flex items-center justify-center h-[400px]">
+        <div className="text-red-300 text-2xl font-bold">
+          Erreur de chargement des données. <br /> Veuillez réessayer
+          ultérieurement
+        </div>
       </div>
     );
   }
 
   return (
     <ul>
-      {sortedTweets.map((element) => {
+      {tweet.map((element) => {
         const user = userProfil?.find((use) => use.userId === element.userId);
-       
+
         return (
           <li
             className="flex justify-start items-start gap-5 py-6 px-4 border-b border-solid border-gray-700"
@@ -58,9 +61,7 @@ function TweetDetail({ tweet, userProfil }) {
                     className="text-white no-underline"
                     to={`/${user?.userName}`}
                   >
-                    <span className="text-base">
-                      {user?.userName}{" "}
-                    </span>
+                    <span className="text-base">{user?.userName} </span>
                   </Link>
                   <img
                     className="w-5 h-auto"
@@ -68,12 +69,10 @@ function TweetDetail({ tweet, userProfil }) {
                     alt="icon de certification"
                   />
                   <Link to={`/${user?.userName}`}>
-                    <span className="text-gray-500">
-                      {user?.lienProfil}{" "}
-                    </span>
+                    <span className="text-gray-500">{user?.lienProfil} </span>
                   </Link>
                   <span className="text-gray-500">
-                    {element?.time}{" "}
+                    {formatTweetDate(element?.time)}
                   </span>
                 </h2>
 

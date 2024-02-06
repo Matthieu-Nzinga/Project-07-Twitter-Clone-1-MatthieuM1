@@ -5,16 +5,16 @@ import { useForm } from "react-hook-form";
 import { iconPhoto } from "../assets/Icon";
 
 const CreateTweet = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset,
-    control,
-  } = useForm();
+  const { register, handleSubmit, formState: { errors }, reset, watch } = useForm();
+
+  const descriptionValue = watch('description', '');
+  const imageValue = watch('selectedImage');
+  const isFormEmpty = descriptionValue.trim() === '' && (imageValue === undefined || imageValue[0] === undefined);
+
   const { addTweet } = useTweetContext();
   const { userProfils } = useTweetContext();
   const userP = userProfils.find((user) => user.isLogin === true);
+  
 
   const [commentaire, setCommentaire] = useState(0);
   const [retweet, setRetweet] = useState(0);
@@ -33,7 +33,7 @@ const CreateTweet = () => {
           userId: userP.userId,
           id: id,
           tweetImage: imageUrl,
-          time: new Date().toISOString().substr(11, 5),
+          time: new Date().toISOString(),
           description: data.description,
           countCommentaire: commentaire,
           countRetweet: retweet,
@@ -50,7 +50,7 @@ const CreateTweet = () => {
         userId: userP.userId,
         id: id,
         tweetImage: null,
-        time: new Date().toISOString().substr(11, 5),
+        time: new Date().toISOString(),
         description: data.description,
         countCommentaire: commentaire,
         countRetweet: retweet,
@@ -66,14 +66,14 @@ const CreateTweet = () => {
     <div className="flex-auto">
       <form onSubmit={handleSubmit((data) => handleCreatePost(data))}>
         <input
-          {...register("description", { maxLength: 180 })}
+          {...register("description", { required:true, maxLength: 180 })}
           className="h-[60px] w-full border-none outline-none text-white bg-black p-10 resize-none text-lg my-13 text-xl"
           type="text"
           placeholder="What's happening?"
         />
         {errors.description && (
           <p className="bold text-red-700">
-            Ce champ ne doit pas dépasser 180 caractères.
+            Ce champ est obligatoire et ne doit pas dépasser 180 caractères.
           </p>
         )}
         <div className="flex items-center justify-between">
@@ -90,6 +90,7 @@ const CreateTweet = () => {
             <TweetAction />
           </div>
           <button
+          disabled={isFormEmpty}
             type="submit"
             className="bg-blue-500 font-base text-white py-[.7rem] px-[1.5rem] rounded-full"
           >
