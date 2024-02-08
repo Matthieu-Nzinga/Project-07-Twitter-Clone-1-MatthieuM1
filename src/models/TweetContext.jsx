@@ -15,7 +15,7 @@ export const TweetProvider = ({ children }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/userProfil")
+      .get("http://localhost:8000/current-user")
       .then((response) => {
         setPserProfils(response.data);
         setLoading(false);
@@ -51,15 +51,23 @@ export const TweetProvider = ({ children }) => {
         const newLikeCount = tweeters.isLikeTweet
           ? tweeters.countLike - 1
           : tweeters.countLike + 1;
-        return {
+  
+        axios.put(`http://localhost:8000/tweets/${tweetId}`, {
           ...tweeters,
           countLike: newLikeCount,
           isLikeTweet: !tweeters.isLikeTweet,
-        };
+        }).then((response) => {
+          const updatedTweet = response.data;
+          const updatedTweets = tweet.map((item) =>
+            item.id === updatedTweet.id ? updatedTweet : item
+          );
+          setTweet(updatedTweets);
+        }).catch((error) => {
+          console.error("Une erreur s'est produite lors de la mise à jour du tweet :", error);
+        });
       }
       return tweeters;
     });
-    setTweet(updatedTweets);
   };
   return (
     <TweetContext.Provider value={{ userProfils, tweet, addTweet, toggleLike, loading}}>

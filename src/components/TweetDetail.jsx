@@ -15,6 +15,7 @@ function TweetDetail({ tweet, userProfil }) {
 
   tweet.sort((a, b) => new Date(b.time) - new Date(a.time));
 
+
   if (loading) {
     return (
       <div className="flex items-center justify-center h-[400px]">
