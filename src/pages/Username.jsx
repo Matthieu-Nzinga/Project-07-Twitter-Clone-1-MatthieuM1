@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { GrLinkPrevious } from "react-icons/gr";
 import { RxLink2 } from "react-icons/rx";
@@ -10,19 +10,28 @@ import UserAffiliate from "../components/UserAffiliate";
 import UserReponse from "../components/UserReponse";
 import UserMedia from "../components/UserMedia";
 import UserAime from "../components/UserAime";
+import { iconCertifier } from "../assets/Icon";
+import { formatTweetDate } from "../models/Database";
 
 function Username() {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+    });
+  }, []);
+
   const [selected, setSelected] = useState("posts");
   const { userName } = useParams();
   const { userProfils } = useTweetContext();
   const { tweet } = useTweetContext();
 
   const oneUser = userProfils.find((user) => {
-    return user.userName == userName;
+    return user.name == userName;
   });
 
   const Twitters = tweet.filter((tweeter) => {
-    return tweeter.userId === oneUser?.userId;
+    return tweeter.author === oneUser?.id;
   });
 
   const handleClick = (tab) => {
@@ -37,22 +46,22 @@ function Username() {
         </Link>
         <div>
           <h2 className="flex items-center gap-2">
-            {oneUser?.userName} <img src={oneUser?.iconCertification} alt="" />
+            {oneUser?.name} <img src={iconCertifier} alt="" />
           </h2>
           <span className="text-gray-400 text-sm">{Twitters.length} posts</span>
         </div>
       </div>
       <div className="max-h-[350px] max-w-full relative mt-[89px] ">
-        <img className="w-full max-h-[350px] " src={oneUser?.banner} alt="" />
+        <img className="w-full max-h-[350px] " src={oneUser?.profileBackground} alt="" />
         <div className="absolute bottom-[-40px] pl-5 flex w-[150px] ">
           <img
             className="absolute bottom-[-40px] pl-50 flex rounded-full "
-            src={oneUser?.avatar}
+            src={oneUser?.profilePicture}
             alt=""
           />
           <div className="flex items-center gap-3 absolute bottom-[-35px] right-[-630px]">
             <p className="w-10 h-10 border border-white text-center rounded-full pt-[2px] ">
-              {oneUser?.points}{" "}
+              ...
             </p>
             <button className="bg-white text-black px-5 py-2 text-xl rounded-full">
               Follow
@@ -62,28 +71,28 @@ function Username() {
       </div>
       <div className="mt-[70px] p-5">
         <h2 className="flex items-center gap-2">
-          {oneUser?.userName} <img src={oneUser?.iconCertification} alt="" />
+          {oneUser?.name} <img src={iconCertifier} alt="" />
         </h2>
-        <span className="text-gray-400 text-sm">{oneUser?.lienProfil} </span>
+        <span className="text-gray-400 text-sm">{oneUser?.handle} </span>
       </div>
-      <p className="px-5 text-justify">{oneUser?.description} </p>
+      <p className="px-5 text-justify">{oneUser?.bio} </p>
       <div className="p-5 flex items-center gap-4">
         <div className="flex items-center gap-1">
           <RxLink2 />
-          <span className="text-[#1D9BF0] ">{oneUser?.linkWeb} </span>
+          <span className="text-[#1D9BF0] ">{oneUser?.website} </span>
         </div>
         <div className="flex items-center gap-1">
           <SlCalender />
-          <span className="text-gray-400 text-sm">{oneUser?.dateCreated} </span>
+          <span className="text-gray-400 text-sm">{formatTweetDate(oneUser?.createdAt)} </span>
         </div>
       </div>
       <div className="px-5 flex gap-8">
         <p>
-          {oneUser?.abonnemets}{" "}
+          {oneUser?.followingCount}{" "}
           <span className="text-gray-400 text-sm">abonnemets</span>
         </p>
         <p>
-          {oneUser?.abonne}{" "}
+          {oneUser?.followersCount}{" "}
           <span className="text-gray-400 text-sm">abonnés</span>
         </p>
       </div>

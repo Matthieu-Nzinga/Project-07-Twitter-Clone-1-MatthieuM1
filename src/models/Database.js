@@ -29,20 +29,7 @@ export const squid = [
   },
 ];
 
-export const follows = [
-  {
-    userId: 2,
-    id: 1,
-  },
-  {
-    userId: 1,
-    id: 2,
-  },
-  {
-    userId: 3,
-    id: 3,
-  },
-];
+
 
 export function formatTweetDate(date) {
   const tweetDate = new Date(date);

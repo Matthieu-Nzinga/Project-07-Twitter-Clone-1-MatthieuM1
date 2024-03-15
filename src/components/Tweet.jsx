@@ -5,12 +5,12 @@ import { useTweetContext } from "../models/TweetContext";
 
 
 function Tweet() {
-  const { tweet } = useTweetContext();
-  const { userProfils } = useTweetContext();
+  const  contextData = useTweetContext();
+  
   
   return (
     <div className="tweets">
-      <TweetDetail tweet={tweet} userProfil={userProfils}/>
+      <TweetDetail tweet={contextData?.tweet} userProfil={contextData?.userProfils}/>
     </div>
   );
 }

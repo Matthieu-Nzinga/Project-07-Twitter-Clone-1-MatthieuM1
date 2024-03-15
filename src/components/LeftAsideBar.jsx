@@ -14,8 +14,9 @@ import { Link } from "react-router-dom";
 import { useTweetContext } from "../models/TweetContext";
 
 function LeftAsideBar() {
-  const { userProfils } = useTweetContext();
-  const userP = userProfils.find((user) => user.isLogin === true);
+  const contextData = useTweetContext();
+  const userP = contextData?.userProfils &&
+  contextData?.userProfils?.length && contextData?.userProfils?.find((user) => user.isLogin === true);
 
   return (
     <div className="w-[270px] h-screen py-10 relative ">
